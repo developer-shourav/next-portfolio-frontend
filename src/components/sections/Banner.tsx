@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import DeveloperImg from "../../../public/img/developer-img/developer-shourav-profile-image.png"
 
 const Banner = () => {
   return (
@@ -13,10 +15,10 @@ const Banner = () => {
           <div className="absolute -bottom-8 left-20 w-20 h-20 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
           
           <div className="relative z-10">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border-4 border-white dark:border-gray-900 shadow-lg overflow-hidden">
+            <div className="w-60 h-60 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border-4 border-white dark:border-gray-900 shadow-lg overflow-hidden">
               {/* Profile image placeholder */}
               <div className="w-full h-full bg-gray-200 border-2 border-dashed rounded-full flex items-center justify-center text-gray-400">
-                <span className="text-sm">Profile Image</span>
+               <Image src={DeveloperImg} alt='Shourav Rajbongshi image'/>
               </div>
             </div>
             

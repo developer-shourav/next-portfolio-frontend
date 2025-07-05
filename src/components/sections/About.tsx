@@ -2,6 +2,8 @@
 import { Download } from 'lucide-react';
 import Link from 'next/link';
 import { SectionTitle } from '../shared/SectionTitle';
+import Image from 'next/image';
+import DeveloperAboutImg from "../../../public/img/developer-img/Developer_shourav_about_img.jpg";
 
 const About = () => {
   return (
@@ -50,7 +52,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl transform rotate-6 -z-10" />
               <div className="bg-gray-200 border-2 border-dashed rounded-2xl w-full aspect-square flex items-center justify-center text-gray-400">
-                <span>Professional Photo</span>
+                <Image src={DeveloperAboutImg} alt='Shourav Rajbongshi About Image' />
               </div>
             </div>
           </div>
