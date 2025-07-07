@@ -1,12 +1,19 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import Image from "next/image";
 import siteLogoDark from "../../../public/img/web-logo/logo.jpg";
 import siteLogo from "../../../public/img/web-logo/logo-light.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -34,7 +41,7 @@ const Header = () => {
               src={theme === 'dark' ? siteLogoDark : siteLogo}
               alt="Shourav's Logo"
               fill
-              className="full"
+              className="object-cover"
               sizes="40px"
             />
           </div>
@@ -67,53 +74,66 @@ const Header = () => {
           >
             {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
-          
+
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Hire Me</Link>
           </Button>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
-          </Button>
+          {/* Mobile Dropdown Menu */}
+          <DropdownMenu open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <DropdownMenuTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon" aria-label="Open mobile menu">
+                <Menu className="h-7 w-7" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="end"
+              className="w-56 p-4 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800"
+            >
+              {navLinks.map((link) => (
+                <DropdownMenuItem key={link.name} asChild>
+                  <Link
+                    href={link.href}
+                    className="w-full text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleTheme}
+                  className="w-full p-2 justify-start"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'light' ? (
+                    <>
+                      <Moon className="h-5 w-5 mr-2" />
+                      Dark Mode
+                    </>
+                  ) : (
+                    <>
+                      <Sun className="h-5 w-5 mr-2" />
+                      Light Mode
+                    </>
+                  )}
+                </Button>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Button asChild className="w-full p-1 my-2">
+                  <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                    Hire Me
+                  </Link>
+                </Button>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="flex justify-center gap-4 pt-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-              >
-                {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-              </Button>
-              <Button asChild>
-                <Link href="/#contact">Hire Me</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
