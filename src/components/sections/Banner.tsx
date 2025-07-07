@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import DeveloperImg from "../../../public/img/developer-img/Shourav-Rajbongshi-Profile-image.jpg";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -91,6 +92,14 @@ const Banner = () => {
             </div>
 
             <div className="flex justify-center md:justify-start gap-6 relative z-10">
+              <Link
+                href="https://wa.me/+8801932376388"
+                target="_blank"
+                className="social-cta"
+                aria-label="WhatsApp Number"
+              >
+                <FaWhatsapp className="w-6 h-6" />
+              </Link>
               <Link
                 href="https://github.com/developer-shourav"
                 target="_blank"
