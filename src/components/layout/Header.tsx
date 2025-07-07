@@ -1,9 +1,12 @@
 "use client";
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { useState } from 'react';
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useState } from "react";
+import Image from "next/image";
+import siteLogoDark from "../../../public/img/web-logo/logo.jpg";
+import siteLogo from "../../../public/img/web-logo/logo-light.png";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -16,9 +19,9 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Experience', href: '/#experience' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Blog', href: '/#blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -26,9 +29,18 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 w-8 h-8 rounded-lg" />
+          <div className="relative size-10 rounded-lg overflow-hidden">
+            <Image
+              src={theme === 'dark' ? siteLogoDark : siteLogo}
+              alt="Shourav's Logo"
+              fill
+              className="full"
+              sizes="40px"
+            />
+          </div>
           <span className="text-xl font-bold text-gray-900 dark:text-white">
-            Shourav<span className="text-indigo-600 dark:text-indigo-400">.</span>
+            Shourav
+            <span className="text-indigo-600 dark:text-indigo-400">.</span>
           </span>
         </Link>
 
@@ -67,7 +79,7 @@ const Header = () => {
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </Button>
         </div>
       </div>
@@ -96,7 +108,7 @@ const Header = () => {
                 {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
               </Button>
               <Button asChild>
-                <Link href="#contact">Hire Me</Link>
+                <Link href="/#contact">Hire Me</Link>
               </Button>
             </div>
           </div>
