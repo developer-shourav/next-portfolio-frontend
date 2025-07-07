@@ -1,3 +1,16 @@
+
+declare module 'next' {
+  export interface PageProps {
+    params: Record<string, string>;
+    searchParams?: Record<string, string | string[] | undefined>;
+  }
+}
+
+export interface ProjectPageProps {
+  project: Project;
+}
+
+
 export interface Skill {
   name: string;
   level: number;
@@ -12,12 +25,17 @@ export interface ProjectLink {
 }
 
 export interface Project {
-  id: number;
+  id: string;
   title: string;
   description: string;
   technologies: string[];
-  image: string;
-  links: ProjectLink;
+  image?: string;
+  links: {
+    live?: string;
+    frontend?: string;
+    backend?: string;
+    code?: string;
+  };
 }
 
 export interface Experience {

@@ -1,5 +1,6 @@
 import { SkillsData, Project, Experience, Education } from './types';
 
+
 export const skills: SkillsData = {
   core: [
     { name: 'React.js', level: 95, icon: 'react' },
@@ -24,7 +25,7 @@ export const skills: SkillsData = {
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: "1",
     title: 'CarSure',
     description: 'A full-stack car shop web application with custom authentication and role-based dashboards.',
     technologies: ['React.js', 'Redux', 'Node.js', 'MongoDB', 'Tailwind CSS'],
@@ -36,7 +37,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 2,
+    id: "2",
     title: 'Dancing Guru',
     description: 'A full-stack website for buying and selling dance courses with role-based login system.',
     technologies: ['React', 'Firebase', 'Node.js', 'MongoDB', 'Tailwind CSS'],
@@ -48,7 +49,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 3,
+    id: "3",
     title: 'Portfolio Website',
     description: 'A modern portfolio website built with Next.js and Tailwind CSS.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn'],
