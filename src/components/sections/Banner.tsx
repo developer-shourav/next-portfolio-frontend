@@ -92,24 +92,24 @@ const Banner = () => {
 
             <div className="flex justify-center md:justify-start gap-6 relative z-10">
               <Link
-                href="https://github.com/developer-raj"
+                href="https://github.com/developer-shourav"
                 target="_blank"
-                className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-all hover:shadow-lg hover:-translate-y-1 relative z-10"
+                className="social-cta"
                 aria-label="GitHub profile"
               >
                 <Github className="w-6 h-6" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/developer-raj"
+                href="https://www.linkedin.com/in/developer-shourav/"
                 target="_blank"
-                className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-all hover:shadow-lg hover:-translate-y-1 relative z-10"
+                className="social-cta"
                 aria-label="LinkedIn profile"
               >
                 <Linkedin className="w-6 h-6" />
               </Link>
               <Link
-                href="mailto:developer@gmail.com"
-                className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-all hover:shadow-lg hover:-translate-y-1 relative z-10"
+                href="mailto:developer.shourav1@gmail.com"
+                className="social-cta"
                 aria-label="Send email"
               >
                 <Mail className="w-6 h-6" />
