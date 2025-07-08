@@ -27,40 +27,75 @@ export const projects: Project[] = [
   {
     id: "1",
     title: 'CarSure',
-    description: 'A full-stack car shop web application with custom authentication and role-based dashboards.',
-    technologies: ['React.js', 'Redux', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    image: '/projects/carsure.jpg',
+    description:
+      'A full-stack car shop platform with secure authentication, role-based dashboards, product filtering, SurjoPay payment integration, and responsive dark/light UI. Users can explore cars, place orders, and manage their profiles while admins can manage users, products, and orders.',
+    technologies: [
+      'React.js',
+      'Redux Toolkit',
+      'TypeScript',
+      'Node.js',
+      'MongoDB',
+      'Tailwind CSS',
+      'Shadcn UI',
+      'Cloudinary',
+      'SurjoPay',
+    ],
+    image: '/img/project/CarSure-Front.png',
     links: {
-      live: 'https://carsure.example.com',
-      frontend: 'https://github.com/developer-raj/carsure-frontend',
-      backend: 'https://github.com/developer-raj/carsure-backend',
+      live: 'https://car-sure.vercel.app/',
+      frontend: 'https://github.com/developer-shourav/CarSure-Frontend',
+      backend: 'https://github.com/developer-shourav/CarSure-Backend',
     },
   },
   {
     id: "2",
     title: 'Dancing Guru',
-    description: 'A full-stack website for buying and selling dance courses with role-based login system.',
-    technologies: ['React', 'Firebase', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    image: '/projects/dancing-guru.jpg',
+    description:
+      'A full-stack dance course website featuring Firebase-based authentication, separate dashboards for students, instructors, and admins, real-time class management, and responsive UI with dark mode support.',
+    technologies: [
+      'React',
+      'Firebase',
+      'Tailwind CSS',
+      'Daisy UI',
+      'React Hook Form',
+      'React Router',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Swiper.js',
+      'SweetAlert2',
+    ],
+   image: '/img/project/DancingGuru.png',
     links: {
-      live: 'https://dancing-guru.example.com',
-      frontend: 'https://github.com/developer-raj/dancing-guru-frontend',
-      backend: 'https://github.com/developer-raj/dancing-guru-backend',
+      live: 'https://dancing-guru.web.app',
+      frontend: 'https://github.com/developer-shourav/Dancing-Guru-Clint-Side',
+      backend: 'https://github.com/developer-shourav/Dancing-Guru-Server',
     },
   },
   {
     id: "3",
     title: 'Queen Toy',
-    description: 'A modern toy selling website with product and sales management  ',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn'],
-    image: '/projects/portfolio.jpg',
+    description:
+      'A toy e-commerce website focused on Disney toys, where users can add, manage, and sell their products. Includes protected routes, strong authentication (Email, Google, GitHub), and a clean responsive interface with dashboard functionality.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Shadcn UI',
+      'Firebase Auth',
+      'Node.js',
+      'Express',
+      'MongoDB',
+    ],
+   image: '/img/project/queenToy.png',
     links: {
-      live: 'https://shourav.example.com',
-      frontend: 'https://github.com/developer-raj/dancing-guru-frontend',
-      backend: 'https://github.com/developer-raj/dancing-guru-backend',
+      live: 'https://queen-toy.web.app',
+      frontend: 'https://github.com/developer-shourav/Queen-Toy-Client',
+      backend: 'https://github.com/developer-shourav/Queen-Toy-Server',
     },
   },
 ];
+
 
 export const experience: Experience[] = [
   {

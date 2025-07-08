@@ -3,6 +3,7 @@ import { projects } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function ProjectDetailsPage({
   params,
@@ -98,21 +99,14 @@ export default async function ProjectDetailsPage({
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-xl border border-border bg-muted overflow-hidden">
-              <div className="h-80 bg-gray-200 flex items-center justify-center text-gray-400">
-                Project Screenshot
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="rounded-lg border border-border bg-muted aspect-square flex items-center justify-center text-muted-foreground text-sm"
-                >
-                  Screenshot {i}
-                </div>
-              ))}
+            <div>
+              <Image
+                className="rounded-xl w-full h-auto object-cover"
+                src={project.image}
+                width={500}
+                height={420}
+                alt={project.title}
+              />
             </div>
           </div>
         </div>

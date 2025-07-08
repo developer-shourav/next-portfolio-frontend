@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Project } from "@/lib/types";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,8 +13,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
     <div className="rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="h-48 bg-muted overflow-hidden">
         {/* Project image placeholder */}
-        <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
-          {project.title} Image
+        <div className="w-full h-full   ">
+          <Image src={project.image} width={450} height={380} alt={project.title} />
         </div>
       </div>
       <div className="p-6">

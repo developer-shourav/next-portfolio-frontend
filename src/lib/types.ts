@@ -29,7 +29,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  image?: string;
+  image: string;
   links: {
     live?: string;
     frontend?: string;

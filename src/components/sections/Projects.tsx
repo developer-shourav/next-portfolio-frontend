@@ -10,7 +10,7 @@ const Projects = () => {
   const featuredProjects = projects.slice(0, 3);
   
   return (
-    <section id="projects" className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="section-padding ">
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Featured Projects"
