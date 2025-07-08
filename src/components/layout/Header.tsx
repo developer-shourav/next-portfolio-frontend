@@ -28,7 +28,7 @@ const Header = () => {
     { name: 'Projects', href: '/projects' },
     { name: 'Experience', href: '/#experience' },
     { name: 'Skills', href: '/#skills' },
-    { name: 'Blog', href: '/#blog' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -75,7 +75,7 @@ const Header = () => {
             {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
 
-          <Button asChild className="hidden md:inline-flex">
+          <Button asChild className="hidden md:inline-flex dark:bg-white">
             <Link href="#contact">Hire Me</Link>
           </Button>
 
