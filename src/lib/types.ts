@@ -39,6 +39,7 @@ export interface Project {
 }
 
 export interface Experience {
+  companyImg: string;
   company: string;
   position: string;
   duration: string;

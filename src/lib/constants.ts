@@ -63,24 +63,54 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
   {
+    companyImg: '/img/thirdCom.png',
     company: 'Bigmod Technologies',
-    position: 'MERN Stack Developer',
+    position: 'Full Stack Developer(MERN)',
     duration: 'Jun 2024 - Present',
     responsibilities: [
-      'Developed and maintained complex frontend using React.js and Next.js',
-      'Collaborated with backend teams for seamless integration',
-      'Implemented secure authentication and authorization systems',
+      'Built and maintained advanced frontends with React.js and Next.js',
+      'Developed fast, scalable, and secure backends using Node.js',
+      'Collaborated closely with backend teams for smooth API integration',
+
     ],
+
   },
   {
+    companyImg: '/img/fourthCom.png',
     company: 'Shothik AI',
-    position: 'Frontend Developer',
+    position: 'Lead Frontend Developer',
     duration: 'Oct 2024 - Jan 2025',
     responsibilities: [
       'Developed complex frontend features with AI integrations',
       'Designed OCR, paraphrasing, and proofreading functionalities',
       'Built pixel-perfect, responsive layouts',
     ],
+  },
+  {
+    companyImg: '/img/secondCom.png',
+    company: 'RedRose Academy',
+    position: 'Frontend Developer(Next.js)',
+    duration: 'Dec 2023 - Sep 2024',
+    responsibilities: [
+      'Developed a large-scale educational platform with robust architecture',
+      'Built a real-time chat application and scalable backend services',
+      'Engineered a complex online examination system with timed quizzes and secure submission',
+      'Designed and implemented a dynamic news and content management system',
+    ],
+
+  },
+  {
+    companyImg: '/img/firstCom.png',
+    company: 'IONIC Corporation',
+    position: 'Frontend Developer(React.js)',
+    duration: 'Sep 2023 - Dec 2023',
+    responsibilities: [
+      'Built ERP software using React.js',
+      'Developed custom business websites',
+      'Created tailored ERP modules (inventory, HR, sales, etc.)',
+      'Delivered full-stack business solutions',
+    ],
+
   },
 ];
 

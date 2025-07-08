@@ -46,17 +46,12 @@ const About = () => {
           </div>
 
           <div className="order-1 md:order-2 relative lg:p-4">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl transform rotate-6 -z-10" />
-              <div className="rounded-2xl w-full aspect-square flex items-center justify-center ">
-                <Image
-                  sizes="450px"
-                  src={DeveloperAboutImg}
-                  className="rounded-2xl"
-                  alt="Shourav-Rajbongshi-web-developer-about-image.jpg"
-                />
-              </div>
-            </div>
+            <Image
+              sizes="450px"
+              src={DeveloperAboutImg}
+              className="rounded-2xl"
+              alt="Shourav-Rajbongshi-web-developer-about-image.jpg"
+            />
           </div>
         </div>
       </div>

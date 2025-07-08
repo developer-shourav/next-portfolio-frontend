@@ -57,7 +57,7 @@ const Banner = () => {
 
             {/*--------------- Tech stack badges ---------------*/}
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
-               <span className="skill-item">TypeScript</span>
+              <span className="skill-item">TypeScript</span>
               <span className="skill-item">React</span>
               <span className="skill-item">Next.js</span>
               <span className="skill-item">Tailwind CSS</span>
@@ -154,10 +154,12 @@ const Banner = () => {
           </div>
         </div>
         {/*--------------- Scroll indicator ---------------*/}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-          <div className="flex flex-col items-center text-gray-500 dark:text-gray-400">
-            <ChevronDown className="w-6 h-6" />
-            <span className="text-sm mt-1">Scroll down</span>
+        <div className="mt-12 md:mt-0">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10 ">
+            <div className="flex flex-col items-center text-gray-500 dark:text-gray-400">
+              <ChevronDown className="w-6 h-6" />
+              <span className="text-sm mt-1">Scroll down</span>
+            </div>
           </div>
         </div>
       </div>
