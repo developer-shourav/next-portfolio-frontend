@@ -75,8 +75,8 @@ export const Experience = () => {
                   className={`bg-card rounded-2xl border border-border overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-xl
                     ${
                       index % 2 === 0
-                        ? "md:pr-8 md:mr-[50%]"
-                        : "md:pl-8 md:ml-[50%]"
+                        ? "md:mr-[50%]"
+                        : "md:ml-[50%]"
                     }`}
                 >
                   <div className="p-6">
@@ -93,25 +93,25 @@ export const Experience = () => {
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-bold text-foreground transition-colors group-hover:text-blue-500 dark:group-hover:text-[var(--chart-5)]">
+                        <h3 className="text-base lg:text-lg xl:text-[19px] font-bold text-foreground transition-colors group-hover:text-blue-500 dark:group-hover:text-[var(--chart-5)]">
                           {exp.position}
                         </h3>
                         <div className="flex flex-wrap items-center gap-2 mt-1">
-                          <span className="font-medium text-primary">
+                          <span className="font-medium text-primary text-sm md:text-base">
                             {exp.company}
                           </span>
-                          <span className="text-sm bg-foreground/5 px-2 py-1 rounded-full text-muted-foreground">
+                          <span className="text-xs lg:text-[13px] bg-foreground/5 px-2 py-1 rounded-full text-muted-foreground">
                             {exp.duration}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <ul className="mt-5 space-y-2.5 pl-1">
+                    <ul className="mt-3 md:mt-5 space-y-2.5 ">
                       {exp.responsibilities.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 group-hover:text-blue-500 dark:group-hover:text-[var(--chart-5)]"
+                            className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-blue-500 dark:text-[var(--chart-5)]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ export const Experience = () => {
                               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                             />
                           </svg>
-                          <span className="text-muted-foreground">{item}</span>
+                          <span className="text-muted-foreground text-sm md:text-[16px]">{item}</span>
                         </li>
                       ))}
                     </ul>
