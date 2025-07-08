@@ -52,17 +52,8 @@ export const Experience = () => {
         />
 
         <div ref={containerRef} className="relative mt-16 max-w-4xl mx-auto">
-          {/* Vertical timeline line using CSS variable */}
-          <div
-            className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-current/20 via-current/50 to-current/20 transform md:-translate-x-1/2"
-            style={{
-              background: `linear-gradient(to bottom, 
-                transparent 0%, 
-                var(--chart-5) 20%, 
-                var(--chart-5) 80%, 
-                transparent 100%)`,
-            }}
-          />
+          {/* Vertical timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-blue-500/20 via-blue-500/50 to-blue-500/20 dark:from-[var(--chart-5)]/20 dark:via-[var(--chart-5)]/50 dark:to-[var(--chart-5)]/20 transform md:-translate-x-1/2" />
 
           <motion.div
             className="space-y-12"
@@ -76,11 +67,8 @@ export const Experience = () => {
                 className="relative pl-10 md:pl-0 group"
                 variants={itemVariants}
               >
-                {/* Timeline dot using CSS variable */}
-                <div
-                  className="absolute left-0 top-2 w-6 h-6 rounded-full border-4 border-background z-10 transform md:left-1/2 md:-translate-x-1/2 group-hover:scale-110 transition-transform"
-                  style={{ backgroundColor: "var(--chart-5)" }}
-                />
+                {/* Timeline dot */}
+                <div className="absolute left-0 top-2 w-6 h-6 rounded-full border-4 border-background z-10 transform md:left-1/2 md:-translate-x-1/2 group-hover:scale-110 transition-transform bg-blue-500 dark:bg-[var(--chart-5)]" />
 
                 {/* Card container */}
                 <div
@@ -105,7 +93,7 @@ export const Experience = () => {
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-bold text-foreground transition-colors group-hover:text-[var(--chart-5)]">
+                        <h3 className="text-xl font-bold text-foreground transition-colors group-hover:text-blue-500 dark:group-hover:text-[var(--chart-5)]">
                           {exp.position}
                         </h3>
                         <div className="flex flex-wrap items-center gap-2 mt-1">
@@ -123,7 +111,7 @@ export const Experience = () => {
                       {exp.responsibilities.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 group-hover:text-[var(--chart-5)]"
+                            className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 group-hover:text-blue-500 dark:group-hover:text-[var(--chart-5)]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -141,15 +129,8 @@ export const Experience = () => {
                     </ul>
                   </div>
 
-                  {/* Animated highlight bar using CSS variables */}
-                  <div
-                    className="h-1 w-0 group-hover:w-full transition-all duration-500"
-                    style={{
-                      background: `linear-gradient(to right, 
-                        var(--chart-5), 
-                        var(--chart-3))`,
-                    }}
-                  />
+                  {/* Animated highlight bar */}
+                  <div className="h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-blue-500 to-blue-300 dark:from-[var(--chart-5)] dark:to-[var(--chart-3)]" />
                 </div>
               </motion.div>
             ))}
