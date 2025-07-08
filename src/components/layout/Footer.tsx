@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, LocationEdit, Mail, Phone } from "lucide-react";
 import siteLogo from "../../../public/img/web-logo/logo.jpg";
 import Image from "next/image";
 import { BsDiscord, BsTelegram, BsWhatsapp } from "react-icons/bs";
@@ -8,164 +8,230 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="relative size-10 rounded-lg overflow-hidden">
+    <footer className="relative bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 pt-16 pb-8 overflow-hidden">
+      {/* Grid background pattern */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+      </div>
+
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 h-12 flex justify-center">
+        <div className="w-32 h-full bg-gradient-to-r from-indigo-500 to-purple-600 dark:from-indigo-600 dark:to-purple-700 rounded-b-3xl shadow-lg"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand column */}
+          <div className="">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative size-12 rounded-xl overflow-hidden border-2 border-white dark:border-gray-800 shadow-lg">
                 <Image
                   src={siteLogo}
                   alt="Shourav's Logo"
                   fill
                   className="object-cover"
-                  sizes="40px"
+                  sizes="60px"
                 />
               </div>
-              <span className="text-xl font-bold text-white">
-                Shourav<span className="text-indigo-400">.</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                Shourav
+                <span className="text-indigo-500 dark:text-indigo-400">.</span>
               </span>
             </div>
-            <p className="mb-4 max-w-md">
+            <p className="mb-6 max-w-md text-gray-600 dark:text-gray-300">
               Front-end developer specializing in building exceptional web
               experiences with React, Next.js, and modern web technologies.
             </p>
-            <div className="flex gap-4">
-              <Link
-                href="https://github.com/developer-shourav"
-                target="_blank"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github className="w-5 h-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/developer-shourav/"
-                target="_blank"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link
-                href="https://wa.me/+8801932376388"
-                target="_blank"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <BsWhatsapp className="w-5 h-5" />
-                <span className="sr-only">WhatsApp</span>
-              </Link>
-              <Link
-                href="mailto:developer@gmail.com"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                <span className="sr-only">Email</span>
-              </Link>
-              <Link
-                href="https://discord.com/users/developer.shourav1"
-                target="_blank"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <BsDiscord className="w-5 h-5" />
-                <span className="sr-only">Discord</span>
-              </Link>
-              <Link
-                href="tg://user?id=Developer_Shourav"
-                 target="_blank"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <BsTelegram className="w-5 h-5" />
-                <span className="sr-only">Telegram</span>
-              </Link>
+
+            {/* Social links */}
+            <div className="mb-8">
+              <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+                Connect with me
+              </h3>
+              <div className="flex gap-3">
+                {[
+                  {
+                    href: "https://github.com/developer-shourav",
+                    icon: <Github className="w-5 h-5" />,
+                    label: "GitHub",
+                  },
+                  {
+                    href: "https://www.linkedin.com/in/developer-shourav/",
+                    icon: <Linkedin className="w-5 h-5" />,
+                    label: "LinkedIn",
+                  },
+                  {
+                    href: "https://wa.me/+8801932376388",
+                    icon: <BsWhatsapp className="w-5 h-5" />,
+                    label: "WhatsApp",
+                  },
+                  {
+                    href: "mailto:developer@gmail.com",
+                    icon: <Mail className="w-5 h-5" />,
+                    label: "Email",
+                  },
+                  {
+                    href: "https://discord.com/users/developer.shourav1",
+                    icon: <BsDiscord className="w-5 h-5" />,
+                    label: "Discord",
+                  },
+                  {
+                    href: "tg://user?id=Developer_Shourav",
+                    icon: <BsTelegram className="w-5 h-5" />,
+                    label: "Telegram",
+                  },
+                ].map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    className="size-10 flex items-center justify-center rounded-full bg-indigo-500 text-white"
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
+          {/* Navigation */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-5 pb-2 border-b border-gray-200 dark:border-gray-700">
               Navigation
             </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">
-                  Home
-                </Link>
+            <ul className="space-y-3">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/#about", label: "About" },
+                { href: "/projects", label: "Projects" },
+                { href: "/#experience", label: "Experience" },
+                { href: "/#skills", label: "Skills" },
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors group"
+                  >
+                    <span className="mr-2 text-indigo-500 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                      →
+                    </span>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-5 pb-2 border-b border-gray-200 dark:border-gray-700">
+              Contact
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <div className="size-10 flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Email
+                  </span>
+                  <span className="block text-gray-700 dark:text-gray-200">
+                    developer@gmail.com
+                  </span>
+                </div>
               </li>
-              <li>
-                <Link
-                  href="/#about"
-                  className="hover:text-white transition-colors"
-                >
-                  About
-                </Link>
+              <li className="flex items-start gap-3">
+                <div className="size-10 flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Phone
+                  </span>
+                  <span className="block text-gray-700 dark:text-gray-200">
+                    +880192356784
+                  </span>
+                </div>
               </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="hover:text-white transition-colors"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#experience"
-                  className="hover:text-white transition-colors"
-                >
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#skills"
-                  className="hover:text-white transition-colors"
-                >
-                  Skills
-                </Link>
+              <li className="flex items-start gap-3">
+                <div className="size-10 flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300">
+                  <LocationEdit className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Location
+                  </span>
+                  <span className="block text-gray-700 dark:text-gray-200">
+                    Nawabganj, Dhaka, BD
+                  </span>
+                </div>
               </li>
             </ul>
           </div>
 
+          {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2">
-                <Mail className="w-5 h-5 mt-0.5 text-indigo-400" />
-                <span>developer@gmail.com</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 mt-0.5 text-indigo-400"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-5 pb-2 border-b border-gray-200 dark:border-gray-700">
+              Newsletter
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Subscribe to get updates on my latest projects and articles.
+            </p>
+            <div className="space-y-3">
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700 dark:text-gray-200"
+                />
+                <button
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 size-8 flex items-center justify-center rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white transition-colors"
+                  aria-label="Subscribe"
                 >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <span>+880192356784</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 mt-0.5 text-indigo-400"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span>Nawabganj, Dhaka-1320, Bangladesh</span>
-              </li>
-            </ul>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                I respect your privacy. Unsubscribe at any time.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>&copy; {currentYear} Shourav Rajbongshi. All rights reserved.</p>
+        {/* Copyright */}
+        <div className="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
+            &copy; {currentYear} Shourav Rajbongshi. All rights reserved.
+          </p>
+          <div className="mt-4 md:mt-0 flex gap-6">
+            <span
+             
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-sm"
+            >
+             Never
+            </span>
+            <span className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-sm">
+              Stop
+            </span>
+            <span className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-sm">
+             Learning
+            </span>
+          </div>
         </div>
       </div>
     </footer>

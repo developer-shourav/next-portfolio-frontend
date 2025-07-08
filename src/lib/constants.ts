@@ -50,13 +50,14 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: 'Portfolio Website',
-    description: 'A modern portfolio website built with Next.js and Tailwind CSS.',
+    title: 'Queen Toy',
+    description: 'A modern toy selling website with product and sales management  ',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn'],
     image: '/projects/portfolio.jpg',
     links: {
       live: 'https://shourav.example.com',
-      code: 'https://github.com/developer-raj/portfolio',
+      frontend: 'https://github.com/developer-raj/dancing-guru-frontend',
+      backend: 'https://github.com/developer-raj/dancing-guru-backend',
     },
   },
 ];

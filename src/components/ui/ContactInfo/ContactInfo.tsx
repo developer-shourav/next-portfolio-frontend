@@ -1,21 +1,42 @@
 "use client";
 import { Mail, Phone, MapPin, Copy } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
-import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 const ContactInfo: React.FC = () => {
-  const [copied, setCopied] = useState<string | null>(null);
-
   const copyToClipboard = (text: string, type: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(type);
-      toast.success(`${type} copied to clipboard!`, {
+    if (!navigator.clipboard) {
+      toast.error("Clipboard API not supported in this browser.", {
         position: "top-right",
         duration: 2000,
+        style: {
+          fontSize: "14px",
+        },
       });
-      setTimeout(() => setCopied(null), 2000);
-    });
+      return;
+    }
+
+    navigator.clipboard.writeText(text).then(
+      () => {
+        toast.success(`${type} copied!`, {
+          position: "top-center",
+          duration: 2000,
+          style: {
+            fontSize: "14px",
+          },
+        });
+      },
+      (err) => {
+        console.error("Failed to copy:", err);
+        toast.error(`Failed to copy ${type.toLowerCase()}.`, {
+          position: "top-center",
+          duration: 2000,
+          style: {
+            fontSize: "14px",
+          },
+        });
+      }
+    );
   };
 
   return (
@@ -76,11 +97,7 @@ const ContactInfo: React.FC = () => {
         </div>
 
         {/* WhatsApp Section */}
-        <a
-          href="https://wa.me/+8801932376388"
-          target="_blank"
-          className="flex items-start gap-4 group"
-        >
+        <div className="flex items-start gap-4 group">
           <div className="p-3 rounded-lg bg-primary/10 text-primary">
             <BsWhatsapp className="h-6 w-6" />
           </div>
@@ -98,7 +115,7 @@ const ContactInfo: React.FC = () => {
               </a>
             </div>
           </div>
-        </a>
+        </div>
 
         {/* Location Section */}
         <div className="flex items-start gap-4 group">
