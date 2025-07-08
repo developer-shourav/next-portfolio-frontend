@@ -116,13 +116,35 @@ export const experience: Experience[] = [
 
 export const education: Education[] = [
   {
+    institutionImage: '/img/university.png',
     institution: 'National University Bangladesh',
     degree: 'B.B.A(Hon\'s) in Management',
     duration: '2020 - 2024',
   },
   {
+    institutionImage: '/img/college.png',
+    institution: 'Government Dohar Nawabgonj College',
+    degree: 'HSC',
+    duration: '2018 - 2020',
+  },
+  {
+    institutionImage: '/img/school.png',
+    institution: 'Nawabgonj Pilot Hight School',
+    degree: 'SSC',
+    duration: '2017 - 2018',
+  },
+];
+export const professionalEducation: Education[] = [
+  {
+    institutionImage: '/img/pHero.jpeg',
     institution: 'Programming Hero',
-    degree: 'Complete Web Development Course',
+    degree: 'Next Level Web development (L2)',
+    duration: '2024',
+  },
+  {
+    institutionImage: '/img/pHero.jpeg',
+    institution: 'Programming Hero',
+    degree: 'Complete Web Development',
     duration: '2023',
   },
 ];

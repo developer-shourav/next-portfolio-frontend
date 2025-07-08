@@ -1,5 +1,7 @@
-import { SectionTitle } from '@/components/shared/SectionTitle';
-import { education } from '@/lib/constants';
+import { SectionTitle } from "@/components/shared/SectionTitle";
+import { education } from "@/lib/constants";
+import { professionalEducation } from "@/lib/constants";
+import Image from "next/image";
 
 export const Education = () => {
   return (
@@ -10,11 +12,37 @@ export const Education = () => {
           subtitle="My academic background"
           centered={true}
         />
-        
+
         <div className="mt-12 max-w-3xl mx-auto space-y-8">
+          {/* --------------Academic Qualification--------------- */}
           {education.map((edu, index) => (
             <div key={index} className="relative pl-8">
-              <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-chart-1 border-4 border-card" />
+              <Image
+                src={edu.institutionImage}
+                alt={edu.institution}
+                width={60}
+                height={60}
+              />
+              <div className="pl-6">
+                <h3 className="text-xl font-bold text-foreground">
+                  {edu.institution}
+                </h3>
+                <p className="text-muted-foreground">{edu.degree}</p>
+                <p className="text-sm text-muted-foreground/80 mt-1">
+                  {edu.duration}
+                </p>
+              </div>
+            </div>
+          ))}
+          {/* --------------Professional Qualification--------------- */}
+          {professionalEducation.map((edu, index) => (
+            <div key={index} className="relative pl-8">
+              <Image
+                src={edu.institutionImage}
+                alt={edu.institution}
+                width={60}
+                height={60}
+              />
               <div className="pl-6">
                 <h3 className="text-xl font-bold text-foreground">
                   {edu.institution}
