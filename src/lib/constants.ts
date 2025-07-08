@@ -87,7 +87,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    companyImg: '/img/secondCom.png',
+    companyImg: '/img/SecondCom.png',
     company: 'RedRose Academy',
     position: 'Frontend Developer(Next.js)',
     duration: 'Dec 2023 - Sep 2024',

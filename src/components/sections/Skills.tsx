@@ -35,7 +35,7 @@ export const Skills = ({ searchParams }: SkillsProps) => {
           centered={true}
         />
 
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 my-8">
           {categories.map((category) => (
             <Link
               key={category.id}
@@ -52,7 +52,7 @@ export const Skills = ({ searchParams }: SkillsProps) => {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 lg:gap-4">
           {filteredSkills.map((skill) => (
             <div
               key={skill.name}
