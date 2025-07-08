@@ -65,7 +65,7 @@ export const projects: Project[] = [
       'Swiper.js',
       'SweetAlert2',
     ],
-   image: '/img/project/DancingGuru.png',
+    image: '/img/project/DancingGuru.png',
     links: {
       live: 'https://dancing-guru.web.app',
       frontend: 'https://github.com/developer-shourav/Dancing-Guru-Clint-Side',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       'Express',
       'MongoDB',
     ],
-   image: '/img/project/queenToy.png',
+    image: '/img/project/queenToy.png',
     links: {
       live: 'https://queen-toy.web.app',
       frontend: 'https://github.com/developer-shourav/Queen-Toy-Client',
@@ -190,3 +190,231 @@ export const professionalEducation: Education[] = [
     duration: '2022',
   },
 ];
+
+export const blogPosts = [
+
+  {
+    id: "react-server-components-deepdive",
+    title: "React Server Components: A Deep Dive",
+    excerpt:
+      "Understanding the architecture, benefits, and practical implementation of React Server Components in production applications.",
+    date: "January 10, 2025",
+    category: "React",
+    content: `React Server Components represent a paradigm shift in React architecture. In this deep dive:
+
+1. How RSCs differ from traditional components
+2. The "zero bundle size" advantage
+3. Data fetching patterns with RSCs
+4. Combining client and server components effectively
+5. Real-world performance benchmarks
+
+We'll examine how major platforms like Vercel and Shopify are adopting this technology...`
+  },
+  {
+    id: "nextjs-15-new-features",
+    title: "Next.js 15: Breaking Down the New Features",
+    excerpt:
+      "Exploring the latest updates in Next.js 15 including partial prerendering, improved compiler, and enhanced developer experience.",
+    date: "February 28, 2025",
+    category: "Next.js",
+    content: `Next.js 15 brings groundbreaking improvements:
+
+• Partial Prerendering (PPR): Hybrid rendering at the route level
+• Turbopack improvements: 40% faster local server startup
+• Improved caching strategies
+• New metadata handling patterns
+• Experimental view transitions API
+
+We'll analyze migration paths from previous versions and benchmark performance gains...`
+  },
+  {
+    id: "webassembly-frontend",
+    title: "WebAssembly for Frontend Developers",
+    excerpt:
+      "How WebAssembly is changing frontend development with near-native performance for compute-intensive tasks.",
+    date: "March 15, 2025",
+    category: "WebAssembly",
+    content: `WebAssembly (Wasm) is no longer just for C++ developers. Frontend applications can leverage Wasm for:
+
+1. Image/video processing
+2. Physics simulations
+3. Machine learning inference
+4. Cryptography operations
+5. Game development
+
+This guide covers:
+- Tools like wasm-pack and wasm-bindgen
+- Rust for frontend development
+- JavaScript interoperability
+- Performance optimization techniques
+- Security considerations...`
+  },
+  {
+    id: "ai-assisted-development",
+    title: "AI-Assisted Development: Productivity Patterns",
+    excerpt:
+      "Practical patterns for integrating AI tools like GitHub Copilot into your daily development workflow.",
+    date: "April 5, 2025",
+    category: "Development",
+    content: `AI coding assistants are transforming developer productivity. Effective patterns include:
+
+• The "pair programming" model with AI
+• Context-aware prompting techniques
+• Code review automation
+• Test generation strategies
+• Documentation automation
+
+We'll analyze:
+- Productivity metrics from real teams
+- Common pitfalls to avoid
+- Privacy and security considerations
+- Customizing models for your codebase...`
+  },
+  {
+    id: "monorepo-advanced",
+    title: "Advanced Monorepo Techniques with Turborepo",
+    excerpt:
+      "Scaling large codebases with advanced Turborepo patterns including remote caching and distributed execution.",
+    date: "May 20, 2025",
+    category: "Tooling",
+    content: `Modern monorepos require sophisticated tooling. This guide covers:
+
+1. Remote caching strategies
+2. Distributed task execution
+3. Dependency graph optimization
+4. Workspace isolation patterns
+5. CI/CD pipeline integration
+
+Case studies from:
+- Enterprises with 1000+ packages
+- Micro-frontend architectures
+- Polyglot repositories
+- Hybrid public/private package management...`
+  },
+  {
+    id: "web3-frontend-patterns",
+    title: "Modern Web3 Frontend Development Patterns",
+    excerpt:
+      "Building responsive, secure frontends for blockchain applications with modern frameworks.",
+    date: "June 8, 2025",
+    category: "Web3",
+    content: `Web3 frontends present unique challenges. Modern solutions include:
+
+• Wallet connection management
+• Real-time blockchain data subscriptions
+• Gas estimation UX patterns
+• Smart contract interaction abstractions
+• Security best practices
+
+Frameworks covered:
+- ethers.js v7
+- wagmi v3
+- RainbowKit
+- Web3Modal
+- SIWE (Sign-In with Ethereum)
+
+We'll examine architectures from leading DeFi platforms...`
+  },
+  {
+    id: "optimizing-nextjs-performance",
+    title: "Optimizing Next.js Applications for Performance",
+    excerpt:
+      "Learn advanced techniques to improve your Next.js app loading times, including code splitting, image optimization, and server-side rendering strategies.",
+    date: "May 15, 2024",
+    category: "Next.js",
+    content: `In this comprehensive guide, we'll explore various performance optimization techniques for Next.js applications. We'll cover:
+
+1. Code splitting and dynamic imports
+2. Image optimization with next/image
+3. Static site generation vs server-side rendering
+4. Caching strategies
+5. Bundle analysis tools
+
+Implementing these techniques can reduce your load times by up to 70%...`,
+  },
+  {
+    id: "react-state-management",
+    title: "State Management in React: A Comprehensive Guide",
+    excerpt:
+      "Comparing Redux, Context API, Zustand, and Jotai for state management in modern React applications.",
+    date: "April 2, 2024",
+    category: "React",
+    content: `Choosing the right state management solution is crucial for React applications. Here's what you need to know:
+
+- Redux: The battle-tested solution with middleware support
+- Context API: Built-in but best for low-frequency updates
+- Zustand: Minimalist and hooks-based
+- Jotai: Atomic state model for fine-grained updates
+
+We'll compare bundle sizes, learning curves, and performance characteristics...`,
+  },
+  {
+    id: "accessible-web-apps",
+    title: "Building Accessible Web Applications",
+    excerpt:
+      "Essential techniques for creating web apps that everyone can use, including ARIA attributes and keyboard navigation.",
+    date: "March 10, 2024",
+    category: "Accessibility",
+    content: `Web accessibility is not optional - it's essential. This guide covers:
+
+1. Semantic HTML structure
+2. ARIA attributes and when to use them
+3. Keyboard navigation patterns
+4. Color contrast requirements
+5. Screen reader testing tools
+
+Following WCAG 2.1 guidelines can make your app usable by 20% more of the population...`,
+  },
+  {
+    id: "typescript-best-practices",
+    title: "TypeScript Best Practices for Large Codebases",
+    excerpt:
+      "How to maintain type safety and developer productivity as your TypeScript project grows.",
+    date: "February 22, 2024",
+    category: "TypeScript",
+    content: `Managing large TypeScript codebases requires discipline. Here are proven practices:
+
+- Strict mode configuration
+- Utility types and generics
+- Module boundaries and type organization
+- Type guards and narrowing
+- Performance considerations
+
+Adopting these patterns early can save hundreds of hours in maintenance...`,
+  },
+  {
+    id: "css-modern-layouts",
+    title: "Modern CSS Layout Techniques in 2024",
+    excerpt:
+      "Exploring Grid, Flexbox, Container Queries, and the new :has() selector for responsive designs.",
+    date: "January 18, 2024",
+    category: "CSS",
+    content: `CSS has evolved dramatically in recent years. Modern layout options include:
+
+1. CSS Grid for two-dimensional layouts
+2. Flexbox for one-dimensional flows
+3. Container queries for component-based responsiveness
+4. The :has() selector for parent selection
+5. Subgrid for nested layouts
+
+These tools eliminate many old hacks and workarounds...`,
+  },
+  {
+    id: "serverless-architecture",
+    title: "Serverless Architecture: Pros, Cons, and Use Cases",
+    excerpt:
+      "When to choose serverless solutions and how to avoid common pitfalls in production.",
+    date: "December 5, 2023",
+    category: "Cloud",
+    content: `Serverless computing is transforming backend development. Key considerations:
+
+- Cold start performance implications
+- Cost modeling for unpredictable loads
+- Stateless design patterns
+- Vendor lock-in risks
+- Observability challenges
+
+We'll analyze real-world case studies from companies that successfully adopted serverless...`,
+  },
+];
+

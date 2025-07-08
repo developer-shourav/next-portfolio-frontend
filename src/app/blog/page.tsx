@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 
-export const Blog = () => {
+export default function BlogPage() {
   return (
     <section id="blog" className="section-padding">
       <div className="container mx-auto px-4">
@@ -16,7 +16,7 @@ export const Blog = () => {
         />
 
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.slice(0, 6).map((post) => (
+          {blogPosts.map((post) => (
             <div
               key={post.id}
               className="rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow"
@@ -44,12 +44,6 @@ export const Blog = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button asChild variant="outline">
-            <Link href="/blog">View All Articles</Link>
-          </Button>
         </div>
       </div>
     </section>
