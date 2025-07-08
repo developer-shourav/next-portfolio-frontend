@@ -124,7 +124,7 @@ export const education: Education[] = [
   {
     institutionImage: '/img/college.png',
     institution: 'Government Dohar Nawabgonj College',
-    degree: 'HSC',
+    degree: 'HSC - in Business Study',
     duration: '2018 - 2020',
   },
   {
@@ -146,5 +146,11 @@ export const professionalEducation: Education[] = [
     institution: 'Programming Hero',
     degree: 'Complete Web Development',
     duration: '2023',
+  },
+  {
+    institutionImage: '/img/ICT-Division.jpeg',
+    institution: 'ICT  Division Bangladesh',
+    degree: 'Digital literacy course for Youth',
+    duration: '2022',
   },
 ];

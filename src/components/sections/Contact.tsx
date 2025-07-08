@@ -1,6 +1,7 @@
-import { SectionTitle } from '@/components/shared/SectionTitle';
-import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { SectionTitle } from "@/components/shared/SectionTitle";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 export const Contact = () => {
   return (
@@ -11,11 +12,11 @@ export const Contact = () => {
           subtitle="Let's work together"
           centered={true}
         />
-        
+
         <div className="mt-12 grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
@@ -24,14 +25,14 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
                   <a
-                    href="mailto:developer@gmail.com"
+                    href="mailto:developer.shourav1@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    developer@gmail.com
+                    developer.shourav1@gmail.com
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <Phone className="h-6 w-6" />
@@ -39,14 +40,25 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
                   <a
-                    href="tel:+880192356784"
+                    href="tel:+8801932376388"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +880192356784
+                    +880 192376388
                   </a>
                 </div>
               </div>
-              
+              <a href="https://wa.me/+8801932376388" className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <BsWhatsapp className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="font-medium text-foreground">WhatsApp</h4>
+                  <span className="text-muted-foreground hover:text-primary transition-colors">
+                    +880 192376388
+                  </span>
+                </div>
+              </a>
+
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <MapPin className="h-6 w-6" />
@@ -60,12 +72,15 @@ export const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div>
             <form className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Name
                   </label>
                   <input
@@ -76,7 +91,10 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Email
                   </label>
                   <input
@@ -87,9 +105,12 @@ export const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-1"
+                >
                   Subject
                 </label>
                 <input
@@ -99,9 +120,12 @@ export const Contact = () => {
                   placeholder="Subject"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-1"
+                >
                   Message
                 </label>
                 <textarea
@@ -111,7 +135,7 @@ export const Contact = () => {
                   placeholder="Your message"
                 ></textarea>
               </div>
-              
+
               <Button type="submit" className="w-full">
                 Send Message
               </Button>
