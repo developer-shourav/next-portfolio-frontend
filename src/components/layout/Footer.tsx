@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import siteLogo from "../../../public/img/web-logo/logo.jpg";
 import Image from "next/image";
+import { BsDiscord, BsTelegram, BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,7 +32,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <Link
-                href="https://github.com/developer-raj"
+                href="https://github.com/developer-shourav"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
@@ -39,7 +40,7 @@ const Footer = () => {
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
-                href="https://www.linkedin.com/in/developer-raj"
+                href="https://www.linkedin.com/in/developer-shourav/"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
@@ -47,12 +48,12 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://wa.me/+8801932376388"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <Twitter className="w-5 h-5" />
-                <span className="sr-only">Twitter</span>
+                <BsWhatsapp className="w-5 h-5" />
+                <span className="sr-only">WhatsApp</span>
               </Link>
               <Link
                 href="mailto:developer@gmail.com"
@@ -60,6 +61,22 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
                 <span className="sr-only">Email</span>
+              </Link>
+              <Link
+                href="https://discord.com/users/developer.shourav1"
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <BsDiscord className="w-5 h-5" />
+                <span className="sr-only">Discord</span>
+              </Link>
+              <Link
+                href="tg://user?id=Developer_Shourav"
+                 target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <BsTelegram className="w-5 h-5" />
+                <span className="sr-only">Telegram</span>
               </Link>
             </div>
           </div>

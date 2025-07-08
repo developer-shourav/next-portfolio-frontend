@@ -1,7 +1,6 @@
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { BsWhatsapp } from "react-icons/bs";
+import ContactInfo from "../ui/ContactInfo/ContactInfo";
 
 export const Contact = () => {
   return (
@@ -14,64 +13,7 @@ export const Contact = () => {
         />
 
         <div className="mt-12 grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                  <Mail className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-foreground">Email</h4>
-                  <a
-                    href="mailto:developer.shourav1@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    developer.shourav1@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-foreground">Phone</h4>
-                  <a
-                    href="tel:+8801932376388"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +880 192376388
-                  </a>
-                </div>
-              </div>
-              <a href="https://wa.me/+8801932376388" className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                  <BsWhatsapp className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-foreground">WhatsApp</h4>
-                  <span className="text-muted-foreground hover:text-primary transition-colors">
-                    +880 192376388
-                  </span>
-                </div>
-              </a>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-foreground">Location</h4>
-                  <p className="text-muted-foreground">
-                    Nawabganj, Dhaka-1320, Bangladesh
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ContactInfo />
 
           <div>
             <form className="space-y-4">
