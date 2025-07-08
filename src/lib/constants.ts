@@ -1,4 +1,4 @@
-import { SkillsData, Project, Experience, Education } from './types';
+import { SkillsData, Project, Experience, Education, BlogPost } from './types';
 
 
 export const skills: SkillsData = {
@@ -191,7 +191,7 @@ export const professionalEducation: Education[] = [
   },
 ];
 
-export const blogPosts = [
+export const blogPosts: BlogPost[] = [
 
   {
     id: "react-server-components-deepdive",
@@ -365,56 +365,7 @@ We'll compare bundle sizes, learning curves, and performance characteristics...`
 
 Following WCAG 2.1 guidelines can make your app usable by 20% more of the population...`,
   },
-  {
-    id: "typescript-best-practices",
-    title: "TypeScript Best Practices for Large Codebases",
-    excerpt:
-      "How to maintain type safety and developer productivity as your TypeScript project grows.",
-    date: "February 22, 2024",
-    category: "TypeScript",
-    content: `Managing large TypeScript codebases requires discipline. Here are proven practices:
 
-- Strict mode configuration
-- Utility types and generics
-- Module boundaries and type organization
-- Type guards and narrowing
-- Performance considerations
 
-Adopting these patterns early can save hundreds of hours in maintenance...`,
-  },
-  {
-    id: "css-modern-layouts",
-    title: "Modern CSS Layout Techniques in 2024",
-    excerpt:
-      "Exploring Grid, Flexbox, Container Queries, and the new :has() selector for responsive designs.",
-    date: "January 18, 2024",
-    category: "CSS",
-    content: `CSS has evolved dramatically in recent years. Modern layout options include:
-
-1. CSS Grid for two-dimensional layouts
-2. Flexbox for one-dimensional flows
-3. Container queries for component-based responsiveness
-4. The :has() selector for parent selection
-5. Subgrid for nested layouts
-
-These tools eliminate many old hacks and workarounds...`,
-  },
-  {
-    id: "serverless-architecture",
-    title: "Serverless Architecture: Pros, Cons, and Use Cases",
-    excerpt:
-      "When to choose serverless solutions and how to avoid common pitfalls in production.",
-    date: "December 5, 2023",
-    category: "Cloud",
-    content: `Serverless computing is transforming backend development. Key considerations:
-
-- Cold start performance implications
-- Cost modeling for unpredictable loads
-- Stateless design patterns
-- Vendor lock-in risks
-- Observability challenges
-
-We'll analyze real-world case studies from companies that successfully adopted serverless...`,
-  },
 ];
 
