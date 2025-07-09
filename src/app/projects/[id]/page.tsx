@@ -5,6 +5,13 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id.toString(),
+  }));
+}
+
 export default async function ProjectDetailsPage({
   params,
 }: {

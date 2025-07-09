@@ -4,13 +4,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id.toString(), 
+  }));
+}
+
 export default async function BlogDetailsPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const projectId = (await params).id;
-  const post = blogPosts.find((post) => post.id == projectId);
+  const postId = (await params).id; 
+  const post = blogPosts.find((post) => post.id == postId);
 
   if (!post) {
     return notFound();
