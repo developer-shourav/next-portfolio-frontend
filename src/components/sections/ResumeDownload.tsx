@@ -28,7 +28,7 @@ export const ResumeDownload = () => {
               className="group relative px-8 py-6 border border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md"
             >
               <a
-                href="./Shourav_Rajbongshi-Front-End_Developer-resume.pdf"
+                href="./Shourav_Rajbongshi-Full-Stack_Developer-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gap-3 font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
@@ -45,7 +45,7 @@ export const ResumeDownload = () => {
               className="group relative px-8 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-blue-500/30 dark:shadow-blue-600/20 transition-all"
             >
               <a
-                href="./Shourav_Rajbongshi-Front-End_Developer-resume.pdf"
+                href="./Shourav_Rajbongshi-Full-Stack_Developer-resume.pdf"
                 download
                 className="gap-3 font-medium text-white"
               >
