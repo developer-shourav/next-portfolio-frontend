@@ -20,29 +20,41 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Experience', href: '/#experience' },
-    { name: 'Skills', href: '/#skills' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: "Experience", href: "/#experience" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="relative size-10 rounded-lg overflow-hidden">
+            {/* Dark theme logo */}
             <Image
-              src={theme === 'dark' ? siteLogoDark : siteLogo}
-              alt="Shourav's Logo"
+              src={siteLogoDark}
+              alt="Shourav's Logo Dark"
               fill
-              className="object-cover"
+              className="object-cover hidden dark:block"
               sizes="40px"
+              priority
+            />
+            {/* Light theme logo */}
+            <Image
+              src={siteLogo}
+              alt="Shourav's Logo Light"
+              fill
+              className="object-cover block dark:hidden"
+              sizes="40px"
+              priority
             />
           </div>
           <span className="text-xl font-bold text-gray-900 dark:text-white">
@@ -64,7 +76,9 @@ const Header = () => {
           ))}
         </nav>
 
+        {/* Right side buttons */}
         <div className="flex items-center gap-4">
+          {/* Theme Toggle */}
           <Button
             variant="ghost"
             size="icon"
@@ -72,9 +86,14 @@ const Header = () => {
             className="hidden sm:inline-flex"
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            {theme === "light" ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
           </Button>
 
+          {/* Hire Me CTA */}
           <Button asChild className="hidden md:inline-flex dark:bg-white">
             <Link href="#contact">Hire Me</Link>
           </Button>
@@ -110,7 +129,7 @@ const Header = () => {
                   className="w-full p-2 justify-start"
                   aria-label="Toggle theme"
                 >
-                  {theme === 'light' ? (
+                  {theme === "light" ? (
                     <>
                       <Moon className="h-5 w-5 mr-2" />
                       Dark Mode
@@ -125,7 +144,10 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Button asChild className="w-full p-1 my-2">
-                  <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    href="#contact"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     Hire Me
                   </Link>
                 </Button>
