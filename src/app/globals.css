@@ -173,6 +173,7 @@
 /* Ensure smooth transitions for theme changes */
 html {
   scroll-behavior: smooth;
+  cursor: url('/cursor.png'), auto;
 }
 
 /* Add custom scrollbar */
