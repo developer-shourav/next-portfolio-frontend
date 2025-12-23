@@ -99,10 +99,23 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
   {
+    companyImg: '/img/fifthCom.png',
+    company: 'Butterfly Digital',
+    position: 'AI & Software Engineer',
+    duration: 'Jul 2025 - Present',
+    responsibilities: [
+      'Built production-grade full-stack applications using Next.js and Node.js',
+      'Designed fully responsive, modern UIs with performance-focused architecture',
+      'Automated business workflows and systems to improve operational efficiency',
+      'Developed and integrated AI agents and intelligent features into web platforms'
+    ],
+
+  },
+  {
     companyImg: '/img/thirdCom.png',
     company: 'Bigmod Technologies',
     position: 'Full Stack Developer(MERN)',
-    duration: 'Jun 2024 - Present',
+    duration: 'Jun 2024 - Jul 2025',
     responsibilities: [
       'Built and maintained advanced frontends with React.js and Next.js',
       'Developed fast, scalable, and secure backends using Node.js',

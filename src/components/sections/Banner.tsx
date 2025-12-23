@@ -146,7 +146,7 @@ const Banner = () => {
               <div className="absolute -bottom-6 -right-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow-lg transform rotate-3">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium">
-                    2+ Years Experience
+                    3+ Years Experience
                   </span>
                 </div>
               </div>

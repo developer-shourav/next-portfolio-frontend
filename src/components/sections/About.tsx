@@ -16,7 +16,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-10">
           <div className="order-2 md:order-1">
             <h3 className="text-2xl font-bold mb-4">
-              Dedicated Front-End Developer with 2+ years of experience
+              Dedicated Front-End Developer with 3+ years of experience
             </h3>
 
             <div className="space-y-4 text-gray-600 dark:text-gray-400">
